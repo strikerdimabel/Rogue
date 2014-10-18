@@ -1,5 +1,11 @@
-package org.dao;
+package dao;
+
+import common.User;
 
 public interface DAO {
-	void addUser();
+	
+	void addUser(User user);
+	
+	//
+	
 }
