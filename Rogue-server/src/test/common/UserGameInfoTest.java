@@ -1,13 +1,13 @@
-package dao;
+package common;
 
 import org.junit.Test;
 
 import junit.framework.TestCase;
 
-public class DAOTest extends TestCase {
+public class UserGameInfoTest extends TestCase {
 
 	@Test
-	public void testAddUser() {
+	public void testFromJson() {
 		fail("Not yet implemented");
 	}
 

@@ -1,11 +1,13 @@
 package dao;
 
-import common.User;
+import java.util.List;
+
+import common.UserGameInfo;
 
 public interface DAO {
 	
-	void addUser(User user);
+	void saveGameInfo(UserGameInfo userGameInfo);
 	
-	//
+	List<UserGameInfo> getUserGameInfo(String userName);
 	
 }
