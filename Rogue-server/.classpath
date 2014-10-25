@@ -4,9 +4,9 @@
 	<classpathentry kind="src" path="src/test"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
-	<classpathentry kind="lib" path="C:/Users/fpm.Nikitin/Documents/GitHub/Rogue/Rogue-server/lib/gson-2.3.jar" sourcepath="C:/Users/fpm.Nikitin/Documents/GitHub/Rogue/Rogue-server/lib/gson-2.3-sources.jar">
+	<classpathentry kind="lib" path="lib/gson-2.3.jar" sourcepath="lib/gson-2.3-sources.jar">
 		<attributes>
-			<attribute name="javadoc_location" value="jar:file:/C:/Users/fpm.Nikitin/Documents/GitHub/Rogue/Rogue-server/lib/gson-2.3-javadoc.jar!/"/>
+			<attribute name="javadoc_location" value="jar:platform:/resource/Rogue-client/lib/gson-2.3-javadoc.jar!/"/>
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="output" path="bin"/>
