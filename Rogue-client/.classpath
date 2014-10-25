@@ -3,11 +3,16 @@
 	<classpathentry kind="src" path="src/main"/>
 	<classpathentry kind="src" path="src/test"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry kind="lib" path="D:/OneDrive/Документы/Программы/3 курс 7 сем/Брутчиков/Rogue/Rogue-client/lib/asciiPanel.jar" sourcepath="D:/OneDrive/Документы/Программы/3 курс 7 сем/Брутчиков/Rogue/Rogue-client/lib/asciiPanel.jar">
+	<classpathentry kind="lib" path="C:/Users/fpm.Nikitin/Documents/GitHub/Rogue/Rogue-client/lib/asciiPanel.jar" sourcepath="D:/OneDrive/Документы/Программы/3 курс 7 сем/Брутчиков/Rogue/Rogue-client/lib/asciiPanel.jar">
 		<attributes>
 			<attribute name="source_encoding" value="UTF-8"/>
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
+	<classpathentry kind="lib" path="C:/Users/fpm.Nikitin/Documents/GitHub/Rogue/Rogue-client/lib/gson-2.3.jar" sourcepath="C:/Users/fpm.Nikitin/Documents/GitHub/Rogue/Rogue-client/lib/gson-2.3-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/fpm.Nikitin/Documents/GitHub/Rogue/Rogue-client/lib/gson-2.3-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
