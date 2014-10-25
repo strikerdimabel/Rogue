@@ -1,6 +1,7 @@
 #Buid
 
 bin/
+.classpath
 
 # Windows image file caches
 Thumbs.db
