@@ -1,10 +1,10 @@
 package server;
 
-import java.net.ServerSocket;
+import java.net.Socket;
 
 public class Dispatcher implements Runnable {
 
-	public Dispatcher(ServerSocket server) {
+	public Dispatcher(Socket socket) {
 	}
 
 	@Override

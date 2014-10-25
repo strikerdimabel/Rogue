@@ -4,14 +4,17 @@ import java.io.IOException;
 import java.net.ServerSocket;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class Server {
 	
 	public static final int PORT = 7777;
 
-	private ExecutorService pool= Executors.newCachedThreadPool();
+	private final ExecutorService pool= Executors.newCachedThreadPool();
     private ServerSocket server;
     private boolean connected = false;
+    private static final Logger logger = LogUtil.getLogger(Server.class);
 	
     public static void main(String[] args) {
     	Server server = new Server();
@@ -21,7 +24,7 @@ public class Server {
     
     private void start() {
     	if (!connected) {
-    		System.err.println("Server is not connected.");
+    		logger.log(Level.SEVERE, "server is not connected");
     		return;
     	}
     	new Thread(new ServerThread()).start();
@@ -29,10 +32,10 @@ public class Server {
 
 	public void connect(int port) {
         try {
-            server = new ServerSocket(7777);
+            server = new ServerSocket(port);
         }
         catch(IOException e) {
-            System.err.println("Port 7777 is in use already.");
+    		logger.log(Level.SEVERE, "port " + port + " is already used");
             return;
         }
         connected = true;
@@ -43,7 +46,11 @@ public class Server {
 	    @Override
 		public void run() {
 	        while (true) {
-	            pool.execute(new Dispatcher(server));
+	            try {
+					pool.execute(new Dispatcher(server.accept()));
+				} catch (IOException e) {
+		    		logger.log(Level.SEVERE, "error while processing request", e);
+				}
 	        }
 		}
 	    		
