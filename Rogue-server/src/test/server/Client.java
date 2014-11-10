@@ -1,4 +1,4 @@
-package client;
+package server;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
@@ -9,10 +9,10 @@ import java.net.InetAddress;
 import java.net.Socket;
 import java.net.UnknownHostException;
 
-import main.UserGameInfo;
-
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+
+import common.UserGameInfo;
 
 public class Client {
 	

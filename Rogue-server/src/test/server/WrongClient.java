@@ -1,4 +1,4 @@
-package client;
+package server;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
@@ -9,14 +9,14 @@ import java.net.InetAddress;
 import java.net.Socket;
 import java.net.UnknownHostException;
 
-import main.UserGameInfo;
-
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-public class Client {
+import common.UserGameInfo;
+
+public class WrongClient {
 	
-	private static final Client INSTANCE = new Client();
+	private static final WrongClient INSTANCE = new WrongClient();
 	public static final int PORT = 7777;
     private static final Logger logger = LogManager.getLogger(Client.class);
 
@@ -24,11 +24,11 @@ public class Client {
 	private PrintStream ps;
 	private InputStream is;
 	
-	private Client() {
+	private WrongClient() {
 		init();
 	}
 	
-	public static Client getInstance() {
+	public static WrongClient getInstance() {
 		return INSTANCE;
 	}
 	
@@ -49,7 +49,7 @@ public class Client {
 		if (client.isClosed()) {
 			return Responce.FAIL;
 		}
-    	ps.println(RequestType.PUSH_USER_GAME_INFO.toInt());
+    	ps.println(1234);
     	ps.println(userGameInfo.toJson());
     	try {
 			return Responce.fromByte(is.read());

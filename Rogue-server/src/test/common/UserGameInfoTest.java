@@ -8,7 +8,10 @@ public class UserGameInfoTest extends TestCase {
 
 	@Test
 	public void testFromJson() {
-		fail("Not yet implemented");
+		UserGameInfo userGameInfo = UserGameInfo.fromJson("{\"userName\":\"test\",\"finished\":false,\"level\":234}");
+		assertEquals("test", userGameInfo.getUserName());
+		assertEquals(false, userGameInfo.isFinished());
+		assertEquals(234, userGameInfo.getLevel());
 	}
 
 }
